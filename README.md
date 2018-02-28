@@ -22,3 +22,19 @@ Run the app locally:
 ```
 bin/rails s
 ```
+
+## Setting up a Github access token
+Create a [Github token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+
+Open the credentials files:
+```
+bin/rails credentials:edit
+```
+
+Add the following line:
+```
+github_access_token: your_token
+```
+
+Save the file, close it, and you should be ready to go!
+
