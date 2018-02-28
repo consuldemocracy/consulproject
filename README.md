@@ -42,3 +42,6 @@ Save the file, close it, and you should be ready to go!
 
 Code published under AFFERO GPL v3 (see [LICENSE-AGPLv3.txt](LICENSE-AGPLv3.txt))
 
+## Contributions
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
