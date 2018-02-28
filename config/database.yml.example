@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username:
+  password:
+
+development:
+  <<: *default
+  database: consulproject_development
+
+staging:
+  <<: *default
+  database: consulproject_staging
+
+production:
+  <<: *default
+  database: consulproject_production
+
+test:
+  <<: *default
+  database: consulproject_test
