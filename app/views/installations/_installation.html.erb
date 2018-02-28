@@ -1,0 +1,21 @@
+<div class="row margin-bottom">
+  <h3><%= link_to installation.name, installation_path(installation) %></h3>
+
+  <h4><%= t(".number_of_lines_changed") %>:</h4> 
+  <div><strong><%= installation.lines_diff %></strong></div>
+  <br/>
+
+  <h4><%= t(".number_of_files_changed") %>:</h4>
+  <div><strong><%= installation.files_changed.count %></strong></div>
+  <br/>
+
+  <h4><%= t(".last_updated_at") %>:</h4>
+  <div><strong><%= time_ago_in_words(installation.last_commit) %></strong></div>
+  <br/>
+
+  <div>
+    <%= link_to t(".changes_in_github"), 
+                installation.diff_url, target: :_blank %>
+  </div>
+  <br/><br/>
+</div>
