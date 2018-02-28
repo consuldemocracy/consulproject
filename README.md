@@ -38,3 +38,7 @@ github_access_token: your_token
 
 Save the file, close it, and you should be ready to go!
 
+## License
+
+Code published under AFFERO GPL v3 (see [LICENSE-AGPLv3.txt](LICENSE-AGPLv3.txt))
+
