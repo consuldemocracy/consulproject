@@ -1,14 +1,17 @@
 en:
-  installations: 
+  title: CONSULProject
+  breadcrumbs:
+    you_are_here: 'You are here:'
+    current: 'Current:'
+  installations:
     index:
-      title: Dashboard
+      title: Overview
+      breadcrumb: Dashboard
     installation:
-      number_of_lines_changed: Number of lines changed
-      number_of_files_changed: Number of files changed
-      last_updated_at: Last updated at
-      changes_in_github: See all changes in Github
-    show:
+      lines_changed: Lines changed
       files_changed: Files changed
-      changes_in_github: See all changes in Github
-      all_installations: Back to all installations
-
+      last_updated_at: Last updated at
+    show:
+      breadcrumb: Installation
+      files_changed: Files changed
+      changes_in_github: See changes in Github
