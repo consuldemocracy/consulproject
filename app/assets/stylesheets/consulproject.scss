@@ -1,0 +1,207 @@
+// CONSULProject
+// -------------
+
+$font-size__base:             16px;
+$font-size__big:              24px;
+$font-size__title:            30px;
+$font-size__small:            14px;
+$font-size__tiny:             12px;
+$font-size__ultra:            10px;
+
+$line-height__base:           30px;
+$line-height__small:          26px;
+$line-height__tiny:           22px;
+
+$spacing:                     30px;
+
+$text__color:                 #444;
+$text__color--link:           #04a7f7;
+$text__color--medium:         #8e8f90;
+$text__color--light:          #c6c6c6;
+$text__color--featured:       #1875f0;
+
+$icon__color--light:          #bdd5d7;
+
+$background__color:           #fff;
+$background__color--light:    #f5f5f5;
+$background__color--featured: #1875f0;
+
+body,
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: $font-size__base;
+  line-height: $line-height__base;
+}
+
+a {
+  color: $text__color--link;
+}
+
+main {
+  background: $background__color--light;
+  min-height: 100vh;
+  padding-bottom: $line-height__base * 2;
+}
+
+code {
+  background-color: #fafbfc;
+  border: 0;
+  display: block;
+  font-size: $font-size__small;
+  word-break: break-all;
+}
+
+.margin {
+
+  &__top {
+    margin-top: $spacing;
+  }
+
+  &__bottom {
+    margin-bottom: $spacing;
+  }
+}
+
+.top-bar {
+  background: $background__color;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,0.2);
+  height: rem-calc(60);
+  position: relative;
+
+  a {
+    color: $text__color;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: $font-size__title;
+  font-weight: bold;
+  margin-bottom: $spacing;
+}
+
+.installation {
+  background: $background__color;
+  border-radius: rem-calc(4);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: $spacing;
+  padding: $spacing;
+
+  &:hover {
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15)
+  }
+
+  &__header {
+    margin-bottom: $spacing;
+
+    @include breakpoint(medium) {
+      margin-bottom: $spacing * 2;
+      min-height: rem-calc(88);
+    }
+
+    &--title {
+      color: $text__color;
+      font-size: $font-size__big;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    &--date {
+      color: $text__color--medium;
+      font-size: $font-size__tiny;
+      line-height: $line-height__tiny;
+
+      .icon {
+        margin-bottom: rem-calc(1);
+        width: rem-calc(15);
+      }
+    }
+  }
+
+  &__info {
+    font-size: $font-size__ultra;
+    line-height: $line-height__tiny;
+    margin-bottom: $spacing;
+
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+    }
+
+    &--title {
+      color: $text__color--light;
+      display: block;
+    }
+
+    &--number {
+      color: $text__color--featured;
+      display: block;
+      font-size: $font-size__base;
+      font-weight: bold;
+    }
+
+    &--date {
+      color: $text__color;
+      display: block;
+      font-weight: bold;
+    }
+
+    &--link {
+      font-size: $font-size__tiny;
+      line-height: $line-height__tiny;
+      margin-top: $spacing;
+    }
+
+    .icon {
+      margin-bottom: $spacing / 3;
+      width: rem-calc(20);
+    }
+  }
+}
+
+.icon {
+  font-size: $font-size__big;
+
+  &__color {
+
+    &--light {
+      filter: invert(0.75) saturate(6) hue-rotate(0);
+    }
+  }
+}
+
+.page {
+
+  &__content {
+    background: $background__color;
+    border-radius: rem-calc(4);
+    padding: $spacing;
+
+
+    &--title {
+      color: $text__color;
+      display: inline-block;
+      font-size: $font-size__big;
+      font-weight: bold;
+      margin-bottom: $spacing;
+    }
+  }
+}
+
+.button {
+
+  &__base {
+    background: $background__color--featured;
+    border-radius: rem-calc(4);
+    color: #fff;
+    font-size: $font-size__small;
+
+    img {
+      filter: invert(1);
+    }
+  }
+}
