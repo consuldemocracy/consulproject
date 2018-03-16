@@ -1,21 +1,52 @@
-<div class="row margin-bottom">
-  <h3><%= link_to installation.name, installation_path(installation) %></h3>
+<div class="cell small-12 medium-6 large-4">
+  <%= link_to installation_path(installation) do %>
+    <div class="installation" data-equalizer-watch>
 
-  <h4><%= t(".number_of_lines_changed") %>:</h4> 
-  <div><strong><%= installation.lines_diff %></strong></div>
-  <br/>
+      <div class="installation__header">
+        <h2 class="installation__header--title">
+          <%= installation.name %>
+        </h2>
 
-  <h4><%= t(".number_of_files_changed") %>:</h4>
-  <div><strong><%= installation.files_changed.count %></strong></div>
-  <br/>
+        <div class="installation__header--date">
+          <%= image_tag('icons/clock.svg',  alt: "",
+                         class: "icon icon__color--light") %>
 
-  <h4><%= t(".last_updated_at") %>:</h4>
-  <div><strong><%= time_ago_in_words(installation.last_commit) %></strong></div>
-  <br/>
+          <span>
+            <%= t("installations.installation.last_updated_at") %>
+            <strong><%= time_ago_in_words(installation.last_commit).capitalize %></strong>
+          </span>
+        </div>
+      </div>
 
-  <div>
-    <%= link_to t(".changes_in_github"), 
-                installation.diff_url, target: :_blank %>
-  </div>
-  <br/><br/>
+      <div class="grid-x">
+        <div class="cell small-6 medium-4">
+          <p class="installation__info">
+            <%= image_tag('icons/git-commit.svg',  alt: "",
+                           class: "icon icon__color--light") %>
+
+            <span class="installation__info--number">
+              <%= installation.lines_diff %>
+            </span>
+            <span class="installation__info--title">
+              <%= t("installations.installation.lines_changed") %>
+            </span>
+          </p>
+        </div>
+
+        <div class="cell small-6 medium-4">
+          <p class="installation__info">
+            <%= image_tag('icons/file-plus.svg',  alt: "",
+                           class: "icon icon__color--light") %>
+
+            <span class="installation__info--number">
+              <%= installation.files_changed.count %>
+            </span>
+            <span class="installation__info--title">
+              <%= t("installations.installation.files_changed") %>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
