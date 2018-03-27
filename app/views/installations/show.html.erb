@@ -1,0 +1,43 @@
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell margin__top">
+      <nav aria-label="<%= t("breadcrumbs.you_are_here") %>" role="navigation">
+        <ul class="breadcrumbs">
+          <li>
+            <%= link_to t("installations.index.breadcrumb"), installations_path %>
+          </li>
+          <li>
+            <span class="show-for-sr"><%= t("breadcrumbs.current") %></span>
+            <%= t("installations.show.breadcrumb") %>
+          </li>
+        </ul>
+      </nav>
+
+      <h1 class="title">
+        <%= image_tag('icons/hash.svg',  alt: "") %>
+        <%= @installation.name %>
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-x page__content">
+    <div class="cell">
+      <h2 class="page__content--title">
+        <%= t("installations.show.files_changed") %>
+      </h2>
+
+      <%= link_to @installation.diff_url,
+                  target: "_blank",
+                  class: "button button__base float-right" do %>
+        <%= image_tag('icons/github.svg',  alt: "") %>
+        <%= t("installations.show.changes_in_github") %>
+      <% end %>
+    </div>
+
+    <div class="cell">
+      <% @installation.files_changed.each do |filename| %>
+        <code><%= filename %></code>
+      <% end %>
+    </div>
+  </div>
+</div>

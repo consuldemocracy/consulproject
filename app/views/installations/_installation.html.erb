@@ -1,0 +1,52 @@
+<div class="cell small-12 medium-6 large-4">
+  <%= link_to installation_path(installation) do %>
+    <div class="installation" data-equalizer-watch>
+
+      <div class="installation__header">
+        <h2 class="installation__header--title">
+          <%= installation.name %>
+        </h2>
+
+        <div class="installation__header--date">
+          <%= image_tag('icons/clock.svg',  alt: "",
+                         class: "icon icon__color--light") %>
+
+          <span>
+            <%= t("installations.installation.last_updated_at") %>
+            <strong><%= time_ago_in_words(installation.last_commit).capitalize %></strong>
+          </span>
+        </div>
+      </div>
+
+      <div class="grid-x">
+        <div class="cell small-6 medium-4">
+          <p class="installation__info">
+            <%= image_tag('icons/git-commit.svg',  alt: "",
+                           class: "icon icon__color--light") %>
+
+            <span class="installation__info--number">
+              <%= installation.lines_diff %>
+            </span>
+            <span class="installation__info--title">
+              <%= t("installations.installation.lines_changed") %>
+            </span>
+          </p>
+        </div>
+
+        <div class="cell small-6 medium-4">
+          <p class="installation__info">
+            <%= image_tag('icons/file-plus.svg',  alt: "",
+                           class: "icon icon__color--light") %>
+
+            <span class="installation__info--number">
+              <%= installation.files_changed.count %>
+            </span>
+            <span class="installation__info--title">
+              <%= t("installations.installation.files_changed") %>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

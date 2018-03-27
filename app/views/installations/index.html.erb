@@ -1,0 +1,25 @@
+<div class="grid-container" data-equalizer data-equalize-on="medium">
+  <div class="grid-x grid-margin-x">
+    <div class="cell margin__top">
+      <nav aria-label="<%= t("breadcrumbs.you_are_here") %>" role="navigation">
+        <ul class="breadcrumbs">
+          <li>
+            <span class="show-for-sr"><%= t("breadcrumbs.current") %></span>
+            <%= t("installations.index.breadcrumb") %>
+          </li>
+        </ul>
+      </nav>
+
+      <h1 class="title">
+        <%= image_tag('icons/terminal.svg',  alt: "") %>
+        <%= t("installations.index.title") %>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container" data-equalizer data-equalize-on="medium">
+  <div class="grid-x grid-margin-x">
+    <%= render @installations %>
+  </div>
+</div>
