@@ -2,6 +2,9 @@
 
 Dashboard to monitor the health of [CONSUL](https://github.com/consul/consul) installations
 
+## Demo website
+https://consulproject.herokuapp.com/
+
 ## Configuration for development
 
 Prerequisites: install git, Ruby 2.5.0, `bundler` gem, and PostgreSQL (>=9.4).
