@@ -8,4 +8,8 @@ class InstallationsController < ApplicationController
     @installation = Installation.find(params[:id])
   end
 
+  def new
+    @installation = Installation.new
+  end
+
 end
