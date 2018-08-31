@@ -1,8 +1,9 @@
 class Installation < ActiveRecord::Base
   delegate :last_commit, :lines_diff, :files_changed, :diff_url, to: :github
+
   enum organization_type: {
     government: 'government',
-    ong: 'ong',
+    ngo: 'ngo',
     university: 'university',
     school: 'school',
     other: 'other',
