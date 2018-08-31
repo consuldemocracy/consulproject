@@ -12,6 +12,9 @@ class Installation < ActiveRecord::Base
     in_production: 'in_production',
   }
 
+  validates :name, presence: true
+  validates :repo, presence: true, uniqueness: true
+
   def github
     Installation::Github.new(self)
   end
