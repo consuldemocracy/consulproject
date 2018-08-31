@@ -1,19 +1,30 @@
-<div class="grid-container" data-equalizer data-equalize-on="medium">
+<div class="grid-container installations" data-equalizer data-equalize-on="medium">
   <div class="grid-x grid-margin-x">
-    <div class="cell margin__top">
-      <nav aria-label="<%= t("breadcrumbs.you_are_here") %>" role="navigation">
-        <ul class="breadcrumbs">
-          <li>
-            <span class="show-for-sr"><%= t("breadcrumbs.current") %></span>
-            <%= t("installations.index.breadcrumb") %>
-          </li>
-        </ul>
-      </nav>
+    <div class="cell margin__top margin__bottom">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <nav aria-label="<%= t("breadcrumbs.you_are_here") %>" role="navigation">
+            <ul class="breadcrumbs">
+              <li>
+                <span class="show-for-sr"><%= t("breadcrumbs.current") %></span>
+                <%= t("installations.index.breadcrumb") %>
+              </li>
+            </ul>
+          </nav>
 
-      <h1 class="title">
-        <%= image_tag('icons/terminal.svg',  alt: "") %>
-        <%= t("installations.index.title") %>
-      </h1>
+          <h1 class="title">
+            <%= image_tag('icons/terminal.svg',  alt: "") %>
+            <%= t("installations.index.title") %>
+          </h1>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li>
+              <%= link_to t('helpers.link.new', model: 'Installation'), new_installation_path, class: 'button' %>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
