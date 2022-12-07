@@ -1,6 +1,6 @@
-# CONSUL PROJECT
+# CONSUL DEMOCRACY PROJECT
 
-Dashboard to monitor the health of [CONSUL](https://github.com/consul/consul) installations
+Dashboard to monitor the health of [CONSUL DEMOCRACY](https://github.com/consul/consul) installations
 
 ## Demo website
 https://consulproject.herokuapp.com/
