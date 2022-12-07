@@ -1,0 +1,110 @@
+<%= form_with(model: installation, local: true) do |form| %>
+  <% if installation.errors.any? %>
+    <div id="error_explanation" class="callout alert" data-closable>
+      <h2><%= pluralize(installation.errors.count, "error") %> prohibited this installation from being saved:</h2>
+
+      <ul>
+      <% installation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+      <button class="close-button" aria-label="Dismiss alert" type="button" data-close="">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+  <% end %>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :name, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.text_field :name %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :repo, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.text_field :repo %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :website, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.text_field :website %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :contact_name, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.text_field :contact_name %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :conact_email, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.text_field :conact_email %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :location, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.text_field :location %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :organization_type, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.select :organization_type, organization_type_for_select %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :status, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.select :status, installation_status_for_select %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="small-3 cell">
+      <%= form.label :notes, class: "text-right middle" %>
+    </div>
+
+    <div class="small-9 cell">
+      <%= form.text_field :notes %>
+    </div>
+  </div>
+
+  <div class="actions columns small-offset-9 large-offset-10">
+    <%= form.submit class: 'button' %>
+  </div>
+<% end %>

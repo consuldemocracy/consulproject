@@ -79,8 +79,16 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    diff-lcs (1.3)
     erubi (1.7.1)
     execjs (2.7.0)
+    factory_bot (4.11.0)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.11.0)
+      factory_bot (~> 4.11.0)
+      railties (>= 3.0.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
     ffi (1.9.23)
     foundation-rails (6.4.3.0)
       railties (>= 3.1.0)
@@ -155,6 +163,23 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-rails (3.8.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.4.25)
@@ -214,6 +239,8 @@ DEPENDENCIES
   capybara (~> 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  factory_bot_rails
+  faker
   foundation-rails
   jbuilder (~> 2.5)
   jquery-rails
@@ -222,6 +249,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.0.rc1)
+  rspec-rails (~> 3.7)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
@@ -235,4 +263,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.16.4

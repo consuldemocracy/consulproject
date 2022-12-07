@@ -1,0 +1,17 @@
+<div class="grid-container" data-equalizer data-equalize-on="medium">
+  <div class="grid-x grid-margin-x">
+    <div class="cell margin__top">
+      <h1>New Installation</h1>
+    </div>
+  </div>
+
+  <div class="grid-x page__content">
+    <div class="cell margin__top">
+      <%= render 'form', installation: @installation %>
+    </div>
+
+    <div class="cell margin__top">
+      <%= link_to 'Back', installations_path %>
+    </div>
+  </div>
+</div>
